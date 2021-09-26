@@ -1,0 +1,12 @@
+b=:StoredBatteryPower>=9995 G=:Generator gr=:GenRate m=51*(1-:AGS)
+gr=:GR m+=33*(:FCUForward>0)*(m==0) ifG<m+b*(m==0+G>m)thenG=m end 
+G+=1*(b!=1)*(G<=gr)*(gr<100) G-=1*b*(G>=gr)*(gr>0) G*=:Shutdown
+:Generator=G :GR=:GenRate m=0 goto1
+
+// b = current battery level
+// G = current generator setting
+// gr = current generator rate (how close to setting)
+// m = minimum battery level, 0 base, 33 if forward engines on,
+//     51 if :AGS set to 0, 101 if :AGS is 1
+// G is raised by 1 or lowered by 1 to keep battery charged so long
+// as G is at least minimum.
