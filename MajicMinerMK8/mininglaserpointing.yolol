@@ -1,0 +1,11 @@
+a=3.5 b=2.5 c=0.2 d=15.5 e=95 f=3.8 g=-3.8 h=60 j=0
+j=:APD // IF j<h AND J>-h THEN j=0 END
+if j>a THEN :MLB=j+f :RTurR=90/j-g :LTurR=:RTurR END goto2
+if j>a THEN :LTTR=j :LTTR=-:RTTR ENDgoto2
+
+//a= Turret Offset to center
+//b= Mining Length Offset
+//c= Mat Scanner Offset
+//d= Min Mat Scanner Distance
+//e= Distance to activate Scanner tracking
+//g=min distance
