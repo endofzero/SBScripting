@@ -1,0 +1,4 @@
+z=:sde l="\n" hm="--Heading--" pm="---Pitch---" tm="On\n     Track!\n"
+hd=:ch-:yh pd=:cp-:yp
+hd=:ch-:yh pd=:cp-:yp ifABS(HD)<5 ANDABS(PD)<5 THENy=tm ELSE y=l+l end
+:TGT=y+hm+l+"    "+hd+z+l+l+pm+l+"    "+pd+z+l goto3
